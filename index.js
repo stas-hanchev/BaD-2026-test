@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const filePath = path.join(__dirname, 'source.txt');
+const filePath = process.argv[2] || path.join(__dirname, 'source.txt');
 const raw = fs.readFileSync(filePath, 'utf8');
 
 const fragments = raw
